@@ -5,6 +5,10 @@ from datetime import datetime, date, timezone, timedelta
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return "Hello World!"
+
 @app.route('/get_events', methods=['GET'])
 def get_events():
     # Get the iCal URL from the GET request
